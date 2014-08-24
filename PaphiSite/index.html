@@ -1,247 +1,308 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Pi Alpha Phi - University of Washington chapter</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1" />
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="styles/loader.min.css"/>
-        <link rel="stylesheet" href="styles/main.min.css"/>
-
-        <link rel="stylesheet" href="styles/custom.css">
-
-        <script src="scripts/modernizr.custom.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
-        <!--[if lte IE 8]>
-        <script src="scripts/respond.min.js"></script>
-        <![endif]-->
-
+﻿<!doctype html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,IE=8,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta itemprop="image" content="assets/favicon.png" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    
+    
+	<title>Synergy - Responsive and Interactive HTML Portfolio</title>
+    
+	<meta name="description" content="" />
+	<meta name="author" content="MEDIACREED.COM" />
+    <!--<meta name="fragment" content="!">-->
+    
+        <link rel="stylesheet" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Sans+Caption:400,700' rel='stylesheet' type='text/css' />        
+        
+        <!-- SCRIPT IE FIXES -->  
+        <!--[if lt IE 9]>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]--> 
+        <!-- END SCRIPT IE FIXES-->
+      
+      
+        <!-- START TEMPLATE JavaScript load -->
+    	<script type="text/javascript" src="js/libs/jquery-1.7.2.min.js"></script>    
+        <script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script> 
+        <script type="text/javascript" src="js/libs/jquery.wipetouch.js"></script>   
+             
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCH31kmjM8BTG4jfCvJ3UjJEDhROWgm-hQ&sensor=true"></script>
+        
+        <script type="text/javascript" src="js/libs/jquery.gmap.min.js"></script>
+        <script type="text/javascript" src="js/greensock/minified/TweenMax.min.js"></script>    
+        <script type="text/javascript" src="js/libs/jquery.timer.js"></script>
+        <script type="text/javascript" src="js/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="js/audio-js/jquery.jplayer.min.js"></script>
+        <script type="text/javascript" src="js/audio-js/jplayer.playlist.min.js"></script>
+        <script type="text/javascript" src="js/mediacreed/scrollbar/mc.custom.list.js"></script>
+        <script type="text/javascript" src="js/mc.modules.animation.js"></script> 
+        <link rel="stylesheet" href="js/video-js/video-js.min.css" media="screen" />
+        <script type="text/javascript" src="js/video-js/video.min.js"></script>
+        <!-- END TEMPLATE JavaScript load ---->
+        
+        <!--<script src="http://vjs.zencdn.net/c/video.js"></script>    
+        Careful when using the online version because the destroy method throws an error.    
+        Our version has the fix on destroy method. Until it updates we recommend using the JS file from the template.    
+        -->
         <script>
-            var miniGoOptions = {
-                reveal: 18000,
-                theme: {
-                    // Set to true to add a translucent background behind each page
-                    contentBackground: true
-                },
+            _V_.options.flash.swf = "js/video-js/video-js.swf";
+            _V_.options.techOrder = ["html5", "flash", "links"];
+            var params = {};
+            params.bgcolor = "#000000";
+            params.allowFullScreen = "true";       
+            _V_.options.flash.params = params;
+    
+        </script>    
+</head>
 
-                countdown: {
-                    // Possible options are 'default' or 'piechart'
-                    type: 'piechart',
-                    // The date when the countdown started. Used by the progress bars. 24 Hour format (00 to 23): Month Day, Year Hours:Minutes
-                    startDate: new Date("January 1, 2014 00:00"),
-                    // The target date we're counting down to. 24 Hour format (00 to 23): Month Day, Year Hours:Minutes
-                    targetDate: new Date("March 21, 2014 11:59")
-                },
+<body>
 
-                background: {
-                    // Main background color
-                    color: '#000',
-                    // Path to pattern overlay or empty if not needed. Use '' for empty.
-                    patternOverlay: 'images/patterns/oblique-l-1.png',
-                    // Sets the opacity of the pattern overlay. 0 is completely transparent, 1.0 is fully opaque.
-                    patternOverlayOpacity: 0.2,
-                    // Possible options are 'slideshow' or 'video'. Enter '' if no slideshow/video is desired as background.
-                    type: 'video',
+<div class="main-template-loader"></div>
 
-                    slideshow: {
-                        // Type of transition effect. Possible options are 'kenburns', 'fade' or 'continuousFade'.
-                        type: 'kenburns',
-                        // Time in seconds between image changes
-                        duration: 10,
-
-                        // Ken Burns animation settings
-                        kenburns: {
-                            // Minimum and maximum scale of the image. It will be randomized for every frame.
-                            minScale: 1.2,
-                            maxScale: 1.7,
-                            // Minimum and maximum movement of the image, in percent. It will be randomized for every frame. Note that this is also limited by the scale because the image needs to stay within the viewport.
-                            minMove: 5,
-                            maxMove: 15
-                        }
-                    },
-
-                    video: {
-                        // Possible options are 'local' or 'youtube'
-                        source: 'youtube',
-                        // Fallback image for browsers that can't play video
-                        imageFallback: 'video/bg.jpg',
-                        // Sets the volume of the video. Value range 0 to 100.
-                        volume: 40,
-
-                        // Configure the video files if you selected 'local' as video source
-                        localFiles: {
-                            // H.264 (mp4) video format file. This one is required because we use it to fall back to Flash playback when HTML5 video support is missing. For example, Firefox only supports this format on Windows so on other systems it will fallback to Flash playback which is a bit slower.
-                            mp4: 'video/bg.mp4',
-                            // Optional. WebM files are generally smaller and faster than H.264 and are played by Chrome, Firefox, Opera and Android browsers (which also support H.264)
-                            webm: 'video/bg.webm',
-                            // Optional. OGG Video is optional but useful because it's played natively by Firefox on OSX and Linux. Enter '' if you don't have this format.
-                            ogg: 'video/bg.ogv',
-                        },
-
-                        youtube: {
-                            // Enter the URL of the Video or Playlist
-                            url: 'https://www.youtube.com/watch?v=6MQ4G8pQqNA',
-
-                            // The options below allow you to play only a part of a video. For playlists it will only work for the first video.
-                            // If you dont't want the video to start from the very beginning, enter the time offset in seconds.
-                            startAt: 0,
-                            // If you dont't want the video to end at the very end, enter the time offset FROM THE BEGINNING of the video, in seconds. Otherwise leave it at 0.
-                            endAt: 500,
-                        }
-                    }
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <div class="loader">
-            <img class="loader-logo" src="images/yellowLinks.png" width="141" height="141" alt="UW Pi Alpha Phi">
-            <div class="bubblingG">
-                <span id="bubblingG_1"></span>
-                <span id="bubblingG_2"></span>
-                <span id="bubblingG_3"></span>
-            </div>
-        </div>
-
-        <div class="site-wrapper">
-            <div class="site-page site-front site-page--active">
-
-                <div class="grid">
-                    <div class="grid__item one-whole push--bottom" style="margin-bottom: 0px !important;">
-                        <img src="images/whiteLinks.png" width="141" height="141" alt="UW Pi Alpha Phi">
-                        <!-- <div class="minigo-logo"><span>MiniGO</span></div> -->
-                    </div>
-
-                    <div class="grid__item one-whole">
-                        <h3 style="margin-bottom: 0px; font-size: larger">Welcome to </h4>
-                        <h1 style="margin-bottom: 0px; font-family: 'Times New Roman', Times, serif;">&#928; &#913; &#934;</h1> 
-                        <h3 style="font-size: larger"> the nation's first Asian-American interest Fraternity.</h4>
-                    </div>
-                    <button class="btn btn--full" style="border:none">OUR NEXT RUSH IN... </button>
-                    <div class="grid__item one-whole">
-                        <div class="clock"></div>
-                    </div>
-                    <div class="grid__item one-whole push--top">
-                        <div class="form-flip push--top">
-                            <button class="form-flip__enabler btn btn--full">Get notified &raquo</button>
-
-                            <div class="form-flip__target">
-                                <form class="form-ajax" data-success-response="success" action="mailListHandler.php" method="post">
-                                    <div class="input-group">
-                                        <input class="text-input" name="email" type="email" placeholder="Your e-mail address" required>
-                                        <div class="input-group-addon">
-                                            <button class="btn btn--font-black" type="submit" autocomplete="off"><span>GO</span><i class="form-spinner fa fa-spinner"></i></button>
-                                        </div>
-                                    </div>
-                                    <input type="hidden" name="subscribe">
-                                </form>
-                            </div>
-
-                            <button class="form-flip__close btn btn--full">Got it, thank you</button>
+<div id="template-wrapper">
+    <div id="menu-container"><!-- start #menu-container -->        
+        <div class="menu-content-holder"><!-- start .menu-content-holder -->
+            <div class="menu-background"></div>
+            <div id="template-logo" class="template-logo" data-href="#portfolio.html"></div> 
+            <div id="template-menu" class="template-menu" data-current-module-type="full_width_gallery" data-side="none" data-href="#portfolio.html"><!-- start #template-menu -->
+                <div class="menu-option-holder">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text">
+                        <a href="#">HOME</a>
+                        <div class="menu-option-sign">+</div>
+                    </div>                
+                    <div class="sub-menu-holder">
+                        <div class="sub-menu-option-holder" data-module-type="slideshow" data-side="none">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#home_layout_1.html" data-path-href="html/home/">Home Layout 1</a></div>
                         </div>
-                    </div>
-
+                        <div class="sub-menu-option-holder" data-module-type="home2" data-side="none">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#home_layout_2.html" data-path-href="html/home/">Home Layout 2</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="home3" data-side="none">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#home_layout_3.html" data-path-href="html/home/">Home Layout 3</a></div>
+                        </div>
+                        
+                    </div>         
                 </div>
-            </div>
-
-            <div id="aboutPage" class="site-page site-page--from-left">
-                <h1>Who we are</h1>
-                <p>The origin of Pi Alpha Phi at the University of Washington first began with a common objective, to establish an organization that would serve as a means of making a profound impact on the University of Washington campus as well as an organization built upon the notion of developing and sustaining leaders amongst its peers – particularly those of Asian-American descent.</p>
-
-                <p>In search of a means of accomplishing this feat, the eventual Founding Fathers discovered the fraternity of Pi Alpha Phi, the nation’s first Asian-American interest fraternity and an organization founded in 1926 on the principles of Academic Excellence, Asian Awareness, Brotherhood, Leadership, and Philanthropy.</p>
-            </div>
-
-            <div id="contactPage" class="site-page site-page--from-right">
-                <h1>Get in touch</h1>
-
-                <div class="grid">
-                    <div class="grid__item one-whole">
-                        <div class="contact-info"><i class="fa fa-phone"></i>+1.425.444.0959</div>
-                        <div class="contact-info"><i class="fa fa-envelope-o"></i><a href="mailto:uwpaphi@u.washington.edu">uwpaphi@u.washington.edu</a></div>
+                <div class="menu-option-holder">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text">
+                        <a href="#">ABOUT US</a>
+                        <div class="menu-option-sign">+</div>
                     </div>
-                    <div class="grid__item one-whole push-half--top">
-                        <div class="contact-info"><i class="fa fa-map-marker"></i>345 Roosevelt Way Seattle, WA 98105, USA</div>
+                    <div class="sub-menu-holder">
+                        <div class="sub-menu-option-holder" data-module-type="text_page" data-side="height">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#about_us.html" data-path-href="html/about_us/">About us</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="text_page" data-side="none">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#philosophy.html" data-path-href="html/about_us/">Philosophy</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="text_page" data-side="height">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#ethics.html" data-path-href="html/about_us/">Ethics</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="text_page" data-side="none">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#careers.html" data-path-href="html/about_us/">Careers</a></div>
+                        </div>                        
                     </div>
                 </div>
-
-                <form id="contactForm" class="form-ajax" data-success-response="success" action="mailListHandler.php" method="post">
-                    <div class="grid">
-                        <div class="grid__item one-half push--top">
-                            <input class="text-input" name="name" type="text" placeholder="Your name" required>
+                <div class="menu-option-holder" data-module-type="news" data-side="height">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#news.html" data-path-href="html/news/">NEWS</a></div>
+                </div>  
+                <div class="menu-option-holder" data-module-type="full_width_gallery" data-side="none">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#portfolio.html" data-path-href="html/portfolio/">PORTFOLIO</a></div>
+                </div> 
+                <div class="menu-option-holder">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#">OUR PROJECTS</a><div class="menu-option-sign">+</div></div>
+                    <div class="sub-menu-holder">
+                        <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#4_columns_projects.html" data-path-href="html/our_projects/">4 Columns Projects</a></div>
                         </div>
-                        <div class="grid__item one-half push--top">
-                            <input class="text-input" name="email" type="email" placeholder="Your e-mail address" required>
+                        <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#3_columns_projects.html" data-path-href="html/our_projects/">3 Columns Projects</a></div>
                         </div>
-                        <div class="grid__item one-whole push--top">
-                            <textarea rows="6" name="message" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="grid__item one-whole push--top">
-                            <button class="btn btn--font-bold" type="submit" autocomplete="off"><span>SEND MESSAGE</span><i class="form-spinner fa fa-spinner"></i></button>
+                        <div class="sub-menu-option-holder" data-module-type="page_columns" data-side="custom">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#2_columns_projects.html" data-path-href="html/our_projects/">2 Columns Projects</a></div>
                         </div>
                     </div>
-                    <input type="hidden" name="contact">
-                </form>
+                </div>               
+                <div class="menu-option-holder" data-module-type="showreel" data-side="none">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#showreel.html" data-path-href="html/showreel/">SHOWREEL</a></div>
+                </div>                               
+                <div class="menu-option-holder">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#">GALLERIES</a><div class="menu-option-sign">+</div></div>
+                    <div class="sub-menu-holder">
+                        <div class="sub-menu-option-holder" data-module-type="gallery" data-side="none">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#image_gallery.html" data-path-href="html/galleries/">Image Gallery</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="gallery" data-side="none">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#mixed_gallery.html" data-path-href="html/galleries/">Mixed Gallery</a></div>
+                        </div>                        
+                    </div>
+                </div>                
+                <div class="menu-option-holder">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#">FEATURES</a><div class="menu-option-sign">+</div></div>
+                    <div class="sub-menu-holder">
+                        <div class="sub-menu-option-holder" data-module-type="full_width" data-side="custom">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#full_width_text_and_image.html" data-path-href="html/features/">Fullwidth Text + Image</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="full_width" data-side="custom">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#full_width_text_and_video.html" data-path-href="html/features/">Fullwidth Text + Video</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="fullscreen_video" data-side="none">
+                            <div class="sub-menu-option-background"></div>
+                            <div class="sub-menu-option-text"><a href="#fullscreen_video.html" data-path-href="html/features/">Fullscreen Video</a></div>
+                        </div>
+                        <div class="sub-menu-option-holder" data-module-type="pricing_tables" data-side="none">
+                            <div class="sub-menu-option-background"> </div>
+                            <div class="sub-menu-option-text"><a href="#pricing_tables.html" data-path-href="html/features/">Pricing Table</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-option-holder" data-module-type="contact" data-side="custom">
+                    <div id="menu-option-background" class="menu-option-background"> </div>
+                    <div id="menu-option-text" class="menu-option-text"><a href="#contact.html" data-path-href="html/contact/">CONTACT US</a></div>
+                </div>            
+            </div><!-- end #template-menu -->  
+            <div id="template-smpartphone-menu">
+                <select>
+                    <option value="#">Navigate to...</option>
+                    <option value="#"> HOME +</option>
+                        <option value="#home_layout_1.html">  - Home Layout 1</option>
+                        <option value="#home_layout_2.html">  - Home Layout 2</option>
+                        <option value="#home_layout_3.html">  - Home Layout 3</option>
+                    <option value="#"> ABOUT US +</option>
+                        <option value="#about_us.html">  - About us</option>
+                        <option value="#philosophy.html">  - Philosophy</option>
+                        <option value="#ethics.html">  - Ethics</option>
+                        <option value="#careers.html">  - Careers</option>
+                    <option value="#news.html"> NEWS</option>
+                    <option value="#portfolio.html"> PORTFOLIO</option>
+                    <option value="#"> OUR PROJECTS +</option>
+                        <option value="#4_columns_projects.html">  - 4 Columns Projects</option>
+                        <option value="#3_columns_projects.html">  - 3 Columns Projects</option>
+                        <option value="#2_columns_projects.html">  - 2 Columns Projects</option>
+                    <option value="#showreel.html"> SHOWREEL</option>    
+                    <option value="#"> GALLERIES +</option>
+                        <option value="#image_gallery.html">  - Image Gallery</option>
+                        <option value="#mixed_gallery.html">  - Mixed Gallery</option>
+                    <option value="#"> FEATURES +</option>
+                        <option value="#full_width_text_and_image.html">  - Full Width Text + Image</option>
+                        <option value="#full_width_text_and_video.html">  - Full Width Text + Video</option>
+                        <option value="#fullscreen_video.html">  - Fullscreen Video</option>
+                        <option value="#pricing_tables.html">  - Pricing Table</option>  
+                    <option value="#contact.html"> CONTACT</option>
+                </select>
             </div>
+			<div id="audio-player" data-auto-play="false" data-player-opened="true" data-player-volume="0.6">
+                <div id="audio-items">
+                    <div id="audio-track" data-src="assets/audio/on_top_of_the_world" data-title="Tim McMorris - Top Of The World"></div>
+                    <div id="audio-track" data-src="assets/audio/overwhelmed" data-title="Tim McMorris - Overwhelmed"></div>
+                    <div id="audio-track" data-src="assets/audio/playing" data-title="Tim McMorris - Playing"></div>
+                    <div id="audio-track" data-src="assets/audio/happy" data-title="Tim McMorris - Happy"></div>                    
+                </div>
+                <div id="audio-player-tooltip" class="opacity_0">
+                    <div id="audio-tooltip-holder">
+                        <div class="audio-tooltip-backg"></div>
+                        <div class="audio-player-tooltip-title"><span></span></div>
+                    </div>
+                    <div class="audio-player-tooltip-hook"></div>                    
+                </div>
+                <div id="audio-player-holder">
+                    <div id="audio-options-button">
+                        <div class="audio-options-button-backg"></div>
+                        <div class="audio-options-button-sign"></div>
+                    </div>
+                    <div id="audio-player-options-holder">                    
+                        <div id="audio-prev-track">
+                            <div class="audio-controls-backg"></div>
+                            <div class="audio-prev-track-sign"></div>
+                        </div>
+                        <div id="audio-play-pause-track">
+                            <div class="audio-controls-backg"></div>
+                            <div class="audio-play-track-sign"></div>
+                            <div class="audio-pause-track-sign"></div>
+                        </div>
+                        <div id="audio-next-track">
+                            <div class="audio-controls-backg"></div>
+                            <div class="audio-next-track-sign"></div>
+                        </div>
+                        <div id="audio-volume-speaker">
+                            <div class="audio-controls-backg"></div>
+                            <div class="audio-volume-on-sign"></div>
+                            <div class="audio-volume-off-sign"></div>
+                        </div>
+                        <div id="audio-volume-bar">
+                            <div class="audio-volume-bar-scrub-backg"></div>
+                            <div class="audio-volume-bar-scrub-current"></div>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+            <footer>    
+                <div id="footer-social">            
+                    <div id="footer-social-holder">
+                        <ul>
+                            <li class="twitter"><a href="http://www.twitter.com" target="_blank"></a></li>
+                            <li class="facebook"><a href="http://www.facebook.com" target="_blank"></a></li>
+                            <li class="google"><a href="http://www.google.com" target="_blank"></a></li>
+                            <li class="dribbble"><a href="http://www.dribbble.com" target="_blank"></a></li>
+                            <li class="flickr"><a href="http://www.flickr.com" target="_blank"></a></li>
+                        </ul>
+                    </div>                   
+                </div>    
+                <div id="footer-text"><!-- start #footer-text -->
+                    <div id="footer-copyright"><a href="#">&copy;2012 YOUR-COMPANY.COM</a></div>           
+                </div><!-- end #footer -->    
+            </footer> 
+        </div><!-- end .menu-content-holder-->
+        
+        <div id="menu-hider">
+            <div id="menu-hider-background"></div>
+            <div id="menu-hider-icon"></div>
         </div>
+    </div><!-- end #menu-container -->
 
-        <div class="nav-social">
-            <a href="https://twitter.com/UWPiAlphaPhi" title="Follow us on Twitter"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.facebook.com/uwpaphi" title="Like us on Facebook"><i class="fa fa-facebook"></i></a>
-            <a href="http://instagram.com/uw_paphi" title="Follow us on Instagram"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCE3ENa_z5SbxIjVptyWoIhQ" title="Subscribe to us on YouTube"><i class="fa fa-youtube"></i></a>
-            <!--             <a href="#" title="Pinterest Pinboard"><i class="fa fa-pinterest"></i></a>
-            <a href="#" title="Our works on Dribbble"><i class="fa fa-dribbble"></i></a> -->
-        </div>
+    <div id="module-container">
+    </div>
+    
+</div>
 
-        <div class="nav-left">
-            <a href="#aboutPage" title="About" class="site-page__trigger"><i class="fa fa-info-circle"></i></a>
-        </div>
-        <div class="nav-right">
-            <a href="#contactPage" title="Contact" class="site-page__trigger"><i class="fa fa-envelope"></i></a>
-        </div>
-        <div class="nav-close">
-            <a href="#" title="Close" class="site-page__close"><i class="fa fa-times-circle"></i></a>
-        </div>
+<div id="load-container">
+</div>
 
+<div id="loading-animation">
+	<img src="assets/loaders/loader.gif" width="16" height="11" alt="Synergy - loading animation"/>
+</div>
+<div id="footer-social-tooltip"></div>
 
-        <figure class="bg-wrapper">
-            <img src="images/bg/bg1.jpg" alt="Optional alt text goes here">
-            <img data-src="images/bg/bg3.jpg" alt="">
-            <img data-src="images/bg/bg2.jpg" alt="">
-            <img data-src="images/bg/bg5.jpg" alt="">
-            <img data-src="images/bg/bg4.jpg" alt="">
-            <img data-src="images/bg/bg6.jpg" alt="">
-        </figure>
-
-        <!--[if lte IE 8]><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><![endif]-->
-        <!--[if gt IE 8]><!--><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!--<![endif]-->
-
-
-        <script src="scripts/flipclock.min.js"></script>
-
-        <!--[if gt IE 8]><!-->
-        <script src="scripts/jquery.easypiechart.min.js"></script>
-        <!--<![endif]-->
-
-        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-
-
-
-        <script src="scripts/main.js"></script>
-
-        <!--[if lte IE 9]>
-        <script src="scripts/jquery.placeholder.min.js"></script>
-        <![endif]-->
-
-        <!-- Google Analytics code goes below this line -->
-
+<div id="console-log"></div>
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script> 
 </body>
 </html>
